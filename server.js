@@ -14,6 +14,10 @@ MongoClient.connect('mongodb+srv://barfieldfredrick:rrbXZidE28b9oya9@rickysclust
         const exerciseCollection = db.collection('exercises')
     })
 
+    app.get('/', (req, res) => {
+        res.render('index.ejs')
+    })
+
     app.listen(3000, function() {
         console.log('listening on port 3000')
     })
