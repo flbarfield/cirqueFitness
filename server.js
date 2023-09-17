@@ -1,23 +1,19 @@
-const bodyParser = require('body-parser')
 const express = require('express')
 const app = express()
-const MongoClient = require('mongodb').MongoClient
+const connectDB = require('./config/database')
+const homeRoutes = require('./routes/home')
 
+require('dotenv').config({path: './config/.env'})
+
+connectDB()
+
+app.set('view engine', 'ejs')
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({extended:true}))
-app.use(bodyParser.json())
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
-MongoClient.connect('mongodb+srv://barfieldfredrick:rrbXZidE28b9oya9@rickyscluster.cfn7tvv.mongodb.net/')
-    .then(client => {
-        console.log('Connected to database.')
-        const db = client.db('cirqueFitness')
-        const exerciseCollection = db.collection('exercises')
-    })
+app.use('/', homeRoutes)
 
-    app.get('/', (req, res) => {
-        res.render('index.ejs')
-    })
-
-    app.listen(3000, function() {
-        console.log('listening on port 3000')
-    })
+app.listen(process.env.PORT, () => {
+    console.log('Server is running! WHOOP!')
+})
