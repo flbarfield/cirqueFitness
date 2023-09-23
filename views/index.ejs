@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="assets/css/extra.css">
 		<link rel="icon" href="images/logo.png">
 	</head>
 	<body class="is-preload">
@@ -47,12 +48,39 @@
 										</header>
 										<p>This is an app created for both circus professionals and hobbyists alike to help keep track of and eventually reach their fitness goals. While there's an ever-updating library of exercises in our database available, along with resources and how-to tutorials for each, you're also able to input your own and track your progress day-to-day!</p>
 										<ul class="actions">
-											<li><a href="/fitnessApp" class="button">Learn More</a></li>
+											<li><a href="/fitnessApp" class="button">Sign In</a></li>
+											<li><a href="/fitnessApp" class="button">Register</a></li>
 										</ul>
 									</div>
 									<span class="image"><img src="/images/aerialistAtWork.jpg" alt="" /></span>
 								</div>
 							</section>
+						
+						<!-- Hidden Sign-in -->
+						<section class="signIn hidden">
+							<fieldset>
+								<Legend>Sign In:</Legend>
+								<input type="text">
+								<label for="userName">Username</label>
+								<input type="text">
+								<label for="password">Password</label>
+								<a href="/fitnessApp" class="button">Submit</a>
+							</fieldset>
+						</section>
+
+						<!-- Hidden Register -->
+						<section class="register hidden">
+							<fieldset>
+								<Legend>Register:</Legend>
+								<input type="text">
+								<label for="userName">Username</label>
+								<input type="text">
+								<label for="password">Password</label>
+								<input type="text">
+								<label for="passwordVerify">Type your password again.</label>
+								<a href="/fitnessApp" class="button">Submit</a>
+							</fieldset>
+						</section>
 
 						<!-- First Section -->
 							<section id="first" class="main special">
