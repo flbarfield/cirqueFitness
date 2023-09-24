@@ -3,3 +3,48 @@
     display: none;
 }
 
+/* /fitnessApp */
+
+.fitnessAppImg {
+    max-width: 50%;
+    margin: 1em auto;
+}
+
+.exerciseTitle{
+    text-align: center;
+}
+
+.appActions{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.exerciseList ul {
+    display: flex;
+    gap: 1em;
+}
+
+.exerciseList span {
+    margin-right: 0.7em;
+    font-size: 1.3em;
+}
+
+.exerciseList i {
+    font-size: 1em;
+}
+
+.exerciseList i:hover{
+    color: rgb(148, 95, 140);
+}
+
+.fa-plus {
+    margin-right: 1em;
+}
+
+
+/* 
+.appActions > li {
+    list-style: none;
+    display: inline-block;
+} */

@@ -17,5 +17,5 @@ app.use('/', homeRoutes)
 app.use('/fitnessApp', fitnessRoute)
 
 app.listen(process.env.PORT, () => {
-    console.log('Server is running! WHOOP!')
+    console.log('Server is running! WHOOP! Port2121')
 })
