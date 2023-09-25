@@ -131,17 +131,24 @@
 // '/' path specific
 const signInButton = document.querySelector('[href="#signIn"]')
 const registerButton = document.querySelector('[href="#register"]')
+let signInStyle = document.getElementById('signIn').style.display
+let registerStyle = document.getElementById('register').style.display
 
-let toggleSection = function () {
-	alert('bing!')
-	let statusCheck = ''
-	statusCheck = signInButton.getAttribute()
-	if (statusCheck === '#signIn' ){
-		
+let toggleSignIn = function () {
+	if (signInStyle === 'none' && registerStyle === 'flex' || signInStyle === "none" && registerStyle === 'none' || signInStyle === '' && registerStyle === ''){
+		document.getElementById('signIn').style.display = 'flex'
+		document.getElementById('register').style.display = 'none'
 	}
 }
 
-signInButton.addEventListener('click', toggleSection)
-registerButton.addEventListener('click', toggleSection)
+let toggleRegister = function () {
+	if (registerStyle === 'none' || signInStyle === 'flex' || registerStyle === '') {
+		document.getElementById('register').style.display = 'flex'
+		document.getElementById('signIn').style.display = 'none'
+	}
+}
+
+signInButton.addEventListener('click', toggleSignIn)
+registerButton.addEventListener('click', toggleRegister)
 
 

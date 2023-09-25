@@ -7,10 +7,16 @@ legend {
 }
 
 /* displays none as a default - javascript will make these toggle to display: flex on appropriate button click. */
-#signIn, #register {
+#signIn {
     display: none;
     justify-content: space-around;
 }
+
+#register {
+    display: none;
+    justify-content: space-around;
+}
+
 
 legend, label[attribute='password'], label[attribute='passwordVerify'] {
     margin-bottom: 1em;
@@ -18,6 +24,7 @@ legend, label[attribute='password'], label[attribute='passwordVerify'] {
 
 fieldset a {
     margin-left: 1.5em;
+    margin-bottom: 2em;
 }
 
 /* '/fitnessApp' */
