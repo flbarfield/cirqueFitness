@@ -18,5 +18,4 @@ async function quoteApiRequest() {
 }
 
 
-
 quoteApiRequest()

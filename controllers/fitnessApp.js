@@ -1,5 +1,7 @@
+const Exercise = require('..models/Exercise')
+
 module.exports = {
-    getFitApp: (req, res) => {
+    getFitApp: async (req, res) => {
         res.render('fitnessApp.ejs')
     }
 }
