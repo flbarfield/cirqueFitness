@@ -53,31 +53,35 @@
 						
 						<!-- Hidden Sign-in -->
 						<section id='signIn'>
-							<fieldset>
-								<Legend>Sign In:</Legend>
-								<input type="text" name="userName">
-								<label>Username</label>
-								<input type="text" name="password">
-								<label>Password</label>
-								<a href="/fitnessApp" class="button">Submit</a>
-							</fieldset>
+							<form action="/login" method="post">
+								<fieldset>
+									<Legend>Sign In:</Legend>
+									<input type="text" name="userName">
+									<label>Username</label>
+									<input type="text" name="password">
+									<label>Password</label>
+									<a href="/fitnessApp" class="button">Submit</a>
+								</fieldset>
+							</form>
 						</section>
 						
 
 						<!-- Hidden Register -->
 						<section id='register'>
-							<fieldset>
-								<Legend>Register:</Legend>
-								<input type="text" name="email">
-								<label>Email</label>
-								<input type="text" name="userName">
-								<label>Username</label>
-								<input type="text" name="password">
-								<label>Password</label>
-								<input type="text" name="confirmPassword">
-								<label>Type your password again.</label>
-								<a href="/fitnessApp" class="button">Submit</a>
-							</fieldset>
+							<form action="/signup" method="post">
+									<fieldset>
+										<Legend>Register:</Legend>
+										<input type="text" name="email">
+										<label>Email</label>
+										<input type="text" name="userName">
+										<label>Username</label>
+										<input type="text" name="password">
+										<label>Password</label>
+										<input type="text" name="confirmPassword">
+										<label>Type your password again.</label>
+										<a href="/fitnessApp" class="button">Submit</a>
+									</fieldset>
+							</form>
 						</section>
 
 						<!-- First Section
