@@ -10,6 +10,10 @@ router.put('/addRep', fitnessAppController.addRep)
 
 router.put('/subRep', fitnessAppController.subRep)
 
+router.put('/addSet', fitnessAppController.addSet)
+
+router.put('/subSet', fitnessAppController.subSet)
+
 router.delete('/deleteExercise', fitnessAppController.deleteExercise)
 
 module.exports = router
