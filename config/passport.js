@@ -6,8 +6,7 @@ module.exports = function (passport) {
   passport.use(new LocalStrategy({ usernameField: 'email' }, async (email, password, done) => {
     try {
       const user = await User.findOne({ email: email.toLowerCase()})
-      let loginCheck = function (err, user){
-        if (err) { return done(err) }
+      .then((user) => {
         if (!user) {
           return done(null, false, { msg: `Email ${email} not found.` })
         }
@@ -21,8 +20,7 @@ module.exports = function (passport) {
           }
           return done(null, false, { msg: 'Invalid email or password.' })
         })
-      } 
-      loginCheck()
+      })
     } catch (err) {
     return done (err)}
   }))
