@@ -62,8 +62,24 @@ fieldset a {
     color: rgb(148, 95, 140);
 }
 
+.exerciseList li {
+    list-style: none;
+}
+
+.exerciseControls {
+    border-bottom: 1px dashed black;
+}
+
+.fa-trash {
+    padding-top: 0.6em;
+}
+
 .fa-plus {
     margin-right: 1em;
+}
+
+#logOut .button {
+    color: rgba(255, 139, 140, 0.5)
 }
 
 .copyright {
