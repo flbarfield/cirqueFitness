@@ -56,11 +56,19 @@
 							<form action="/login" method="post">
 								<fieldset>
 									<Legend>Sign In:</Legend>
+									<input type="text" name="email">
+									<label>Email</label>
 									<input type="text" name="userName">
 									<label>Username</label>
 									<input type="text" name="password">
 									<label>Password</label>
-									<a href="/fitnessApp" class="button">Submit</a>
+									<input type="submit">
+									<a href="/fitnessApp" class="button">Way around form submission</a>
+									<% if (locals.messages.errors) { %>
+										<% messages.errors.forEach( el => { %>
+											<div class="alert alert-danger"><%= el.msg %></div>
+										<% }) %>    
+									<% } %>
 								</fieldset>
 							</form>
 						</section>
