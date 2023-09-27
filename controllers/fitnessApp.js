@@ -1,4 +1,4 @@
-const Exercises = require('../models/exercises')
+const Exercises = require('../models/Exercises')
 
 module.exports = {
     getFitApp: async (req, res) => {
