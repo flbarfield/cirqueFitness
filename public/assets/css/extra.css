@@ -47,6 +47,7 @@ fieldset a {
 .exerciseList ul {
     display: flex;
     gap: 1em;
+    justify-content: space-between;
 }
 
 .exerciseList span {
@@ -68,6 +69,10 @@ fieldset a {
 
 .exerciseControls {
     border-bottom: 1px dashed black;
+}
+
+.fa-note-sticky {
+    margin-right: 1em;
 }
 
 .fa-trash {
