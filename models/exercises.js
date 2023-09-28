@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const ExerciseSchema = new mongoose.Schema({
-    exercise: {
+    title: {
         type: String,
         required: true,
     },
@@ -17,6 +17,14 @@ const ExerciseSchema = new mongoose.Schema({
         type: Boolean,
         required: false,
     }, 
+    decription: {
+        type: String,
+        require: true,
+    },
+    userId: {
+        type: String,
+        require: true,
+    }
 })
 
 module.exports = mongoose.model('Exercise', ExerciseSchema)

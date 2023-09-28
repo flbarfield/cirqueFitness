@@ -1,4 +1,7 @@
 /* GENERAL */
+/* .hidden {
+    display: none;
+} */
 
 /* '/' path INDEX */
 
@@ -32,6 +35,17 @@ fieldset a {
 .fitnessAppImg {
     max-width: 50%;
     margin: 1em auto;
+}
+
+.date {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid black;
+    justify-content: center;
+}
+
+.date input {
+    margin: 0 auto;
 }
 
 .exerciseTitle{
@@ -71,7 +85,8 @@ fieldset a {
     border-bottom: 1px dashed black;
 }
 
-.fa-note-sticky {
+
+.fa-note-sticky, .fa-stopwatch, .fa-play {
     margin-right: 1em;
 }
 
@@ -83,8 +98,8 @@ fieldset a {
     margin-right: 1em;
 }
 
-#logOut .button {
-    color: rgba(255, 139, 140, 0.5)
+.extraActions {
+    flex-direction: column;
 }
 
 .copyright {
