@@ -1,3 +1,15 @@
+// document.querySelectorAll('.fa-note-sticky').addEventListener('click', showNotes)
+// document.querySelectorAll('.fa-stopwatch').addEventListener('click', showTimer)
+
+// function showNotes () {
+
+// }
+
+// function showTimer() {
+
+// }
+
+
 // header quote generation
 async function quoteApiRequest() {
     try {
@@ -16,6 +28,5 @@ async function quoteApiRequest() {
     }
 
 }
-
 
 quoteApiRequest()

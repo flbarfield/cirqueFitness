@@ -153,5 +153,3 @@ let toggleRegister = function () {
 
 signInButton.addEventListener('click', toggleSignIn)
 registerButton.addEventListener('click', toggleRegister)
-
-
