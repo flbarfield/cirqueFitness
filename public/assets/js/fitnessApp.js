@@ -2,7 +2,7 @@
 // document.querySelectorAll('.fa-stopwatch').addEventListener('click', showTimer)
 
 // function showNotes () {
-
+//     document.
 // }
 
 // function showTimer() {

@@ -1,4 +1,7 @@
 /* '/fitnessApp' */
+.hidden {
+    display: none;
+}
 
 .fitnessAppImg {
     max-width: 50%;
