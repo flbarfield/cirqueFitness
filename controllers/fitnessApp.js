@@ -5,7 +5,7 @@ module.exports = {
         console.log(req.user)
         try {
            const exerciseItems = await Exercises.find({userId: req.user.id})
-           res.render('fitnessApp.ejs', {exercises: exerciseItems, user: req.user})  
+           res.render('fitnessApp.ejs', {exercises: exerciseItems})  
         } catch (err) {
             console.log(err)
         }
@@ -21,6 +21,7 @@ module.exports = {
                 userId: req.user.id,
             })
             console.log('Exercise has been added!')
+            res.redirect('/fitnessApp')
         } catch (err) {
             console.log(err)
         }

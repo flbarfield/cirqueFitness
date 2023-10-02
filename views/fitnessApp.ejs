@@ -32,8 +32,8 @@
 								<ul class='exerciseList'>
 									<% exercises.forEach( el => { %>
 									<li>
-										<ul class="exerciseControls" data-id="<%=el_id%>">
-											<li><span class='exerciseName'><%= el.title %> ||</li>
+										<ul class="exerciseControls" data-id="<%=el._id%>">
+											<li><span class='exerciseName'><%= el.name %> ||</li>
 											<li><span class="sets">Sets: <%= el.sets %></span> <i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i></li><span>||</span>
 											<li><span class="reps">Reps: <%= el.reps %></span><i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i> </li><span>||</span>
 											<li><i class="fa-solid fa-stopwatch"></i><i class="fa-solid fa-note-sticky"></i><i class="fa-solid fa-trash"></i></li>
@@ -57,10 +57,10 @@
 								<section class="moreHiddenInfo">
 									<!-- Hidden Instructions -->
 									<section class="userExercise">
-										<form action="post/createExercise/<% exercises.userId %>" method="post">
+										<form action="/fitnessApp/createExercise/<% exercises.userId %>" method="post">
 											<input type="text" name="name" placeholder="Exercise Name">
 											<input type="text" name="description" placeholder="Description">
-											<a class="button">Submit</a>
+											<input class="button" type="submit"></input>
 										</form>
 									</section>
 									<p class="instructions"></p>

@@ -78,6 +78,11 @@
     margin-top: 1em;
 }
 
+.userExercise > * {
+    display: flex;
+    gap: 1em;
+}
+
 
 
 .copyright {
