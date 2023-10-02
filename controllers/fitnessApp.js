@@ -29,11 +29,8 @@ module.exports = {
 
     addRep: async(req, res) => {
         try {
-            await Exercises.findOneandUpdate({_id:req.body.exerciseFromJSFile}, {
-                completed: true
-            })
+            await Exercises.findOneandUpdate({_id:req.body.exerciseFromJSFile}, {$inc: {reps: 1}})
             console.log('Rep Added')
-            res.json(rep += 1)
         } catch (err) {
             console.log(err)
         }

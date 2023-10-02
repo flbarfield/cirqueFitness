@@ -34,8 +34,20 @@
 									<li>
 										<ul class="exerciseControls" data-id="<%=el._id%>">
 											<li><span class='exerciseName'><%= el.name %> ||</li>
-											<li><span class="sets">Sets: <%= el.sets %></span> <i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i></li><span>||</span>
-											<li><span class="reps">Reps: <%= el.reps %></span><i class="fa-solid fa-plus"></i> <i class="fa-solid fa-minus"></i> </li><span>||</span>
+											<li>
+												<form action="">
+													<span class="sets">Sets: <%= el.sets %></span> <i class="fa-solid fa-plus"></i>
+												</form>
+												<form action="">
+													<i class="fa-solid fa-minus"></i></li><span>||</span>
+												</form>
+												<form action="/fitnessApp/addRep<%= el._Id %>?_method=PUT" method="put">
+													<li><span class="reps">Reps: <%= el.reps %></span><button type="submit" class="fa-solid fa-plus formButton"></button>
+												</form>
+												<form action="">
+													<i class="fa-solid fa-minus"></i> </li><span>||</span>
+												</form>
+											
 											<li><i class="fa-solid fa-stopwatch"></i><i class="fa-solid fa-note-sticky"></i><i class="fa-solid fa-trash"></i></li>
 										</ul>
 										<ul class="hidden extraActions">
