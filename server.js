@@ -9,6 +9,7 @@ const logger = require('morgan')
 const connectDB = require('./config/database')
 const homeRoutes = require('./routes/home')
 const fitnessRoute = require('./routes/fitnessApp')
+const methodOverride = require('method-override')
 
 require('dotenv').config({path: './config/.env'})
 require('./config/passport')(passport)
@@ -20,6 +21,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(logger('dev'))
+app.use(methodOverride("_method"));
 
 //Sessions
 app.use(
@@ -35,11 +37,14 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
+//Use flash messages for errors, info, ect...
 app.use(flash())
 
+//Setup Routes For Which The Server Is Listening
 app.use('/', homeRoutes)
 app.use('/fitnessApp', fitnessRoute)
 
+//Server Running
 app.listen(process.env.PORT, () => {
     console.log('Server is running! WHOOP! Port2121')
 })
