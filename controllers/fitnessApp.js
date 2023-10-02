@@ -4,7 +4,7 @@ module.exports = {
     getFitApp: async (req, res) => {
         console.log(req.user)
         try {
-           const exerciseItems = await Exercises.find({userId:req.user.id})
+           const exerciseItems = await Exercises.find({userId: req.user.id})
            res.render('fitnessApp.ejs', {exercises: exerciseItems, user: req.user})  
         } catch (err) {
             console.log(err)
@@ -13,7 +13,14 @@ module.exports = {
   
     createExercise: async(req, res) => {
         try {
-            await Exercises.create({exercise: req.body.exerciseItem})
+            await Exercises.create({
+                name: req.body.name,
+                sets: 0,
+                reps: 0,
+                description: req.body.description,
+                userId: req.user.id,
+            })
+            console.log('Exercise has been added!')
         } catch (err) {
             console.log(err)
         }

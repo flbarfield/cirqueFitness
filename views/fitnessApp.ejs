@@ -54,8 +54,15 @@
 									<li><a href="#" class="button">Community Exercises</a></li>
 									<li><a href="/" class="logOut button">Log Out</a></li>
 								</ul>
-								<section class="hiddenInstructions">
+								<section class="moreHiddenInfo">
 									<!-- Hidden Instructions -->
+									<section class="userExercise">
+										<form action="post/createExercise/<% exercises.userId %>" method="post">
+											<input type="text" name="name" placeholder="Exercise Name">
+											<input type="text" name="description" placeholder="Description">
+											<a class="button">Submit</a>
+										</form>
+									</section>
 									<p class="instructions"></p>
 									<p class="">.</p>
 								</section>
