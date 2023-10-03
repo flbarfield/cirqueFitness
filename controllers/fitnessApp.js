@@ -3,9 +3,10 @@ const Exercises = require('../models/exercises')
 module.exports = {
     getFitApp: async (req, res) => {
         console.log(req.user)
+        const userName = req.user
         try {
            const exerciseItems = await Exercises.find({userId: req.user.id})
-           res.render('fitnessApp.ejs', {exercises: exerciseItems})  
+           res.render('fitnessApp.ejs', {exercises: exerciseItems, username: userName})  
         } catch (err) {
             console.log(err)
         }
