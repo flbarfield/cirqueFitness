@@ -53,10 +53,6 @@
     list-style: none;
 }
 
-.exerciseList form button {
-    width: 5em;
-}
-
 .exerciseControls {
     border-bottom: 1px dashed black;
 }
