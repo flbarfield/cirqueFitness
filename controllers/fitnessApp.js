@@ -6,7 +6,7 @@ module.exports = {
         const userName = req.user
         try {
            const exerciseItems = await Exercises.find({userId: req.user.id})
-           res.render('fitnessApp.ejs', {exercises: exerciseItems, username: userName})  
+           res.render('fitnessApp.ejs', {exercises: exerciseItems, userName: req.user.userName})  
         } catch (err) {
             console.log(err)
         }
@@ -30,8 +30,9 @@ module.exports = {
 
     addRep: async(req, res) => {
         try {
-            await Exercises.findOneandUpdate({_id:req.body.exerciseFromJSFile}, {$inc: {reps: 1}})
+            await Exercises.findOneAndUpdate({_id:req.params.id}, {$inc: {reps: +1}})
             console.log('Rep Added')
+            res.redirect('/fitnessApp')
         } catch (err) {
             console.log(err)
         }
@@ -39,11 +40,9 @@ module.exports = {
 
     subRep: async(req, res) => {
         try {
-            await Exercises.findOneandUpdate({_id:req.body.exerciseFromJSFile}, {
-                completed: true
-            })
+            await Exercises.findOneAndUpdate({_id:req.params.id}, {$inc: {reps: -1}})
             console.log('Rep Subtracted')
-            res.json(rep -= 1)
+            res.redirect('/fitnessApp')
         } catch (err) {
             console.log(err)
         }
@@ -51,11 +50,9 @@ module.exports = {
 
     addSet: async (req, res) => {
         try {
-            await Exercises.findOneandUpdate({_id: req.body.exerciseFromJSFile}, {
-                completed: true
-            })
+            await Exercises.findOneAndUpdate({_id:req.params.id}, {$inc: {sets: +1}})
             console.log('Set Added')
-            res.json(set += 1)
+            res.redirect('/fitnessApp')
         } catch (err) {
             console.log(err)
         }
@@ -63,11 +60,9 @@ module.exports = {
 
     subSet: async (req, res) => {
         try {
-            await Exercises.findOneandUpdate({_id: req.body.exerciseFromJSFile}, {
-                completed: true
-            }) 
+            await Exercises.findOneAndUpdate({_id:req.params.id}, {$inc: {sets: -1}})
             console.log('Set Subtracted')
-            res.json(set -= 1)
+            res.redirect('/fitnessApp')
         } catch (err) {
             console.log(err)
         }
@@ -75,9 +70,11 @@ module.exports = {
 
     deleteExercise: async (req,res) => {
         try {
-            await Exercises.findOneAndDelete({_id:req.body.exerciseFromJSFile})
+            let exercise = await Exercises.findById({ _id: req.params.id})
+
+            await exercise.deleteOne({_id:req.params.id})
             console.log('Deleted Exercise')
-            res.json('Deleted It')
+            res.redirect('/fitnessApp')
         } catch (err) {
             console.log(err)
         }

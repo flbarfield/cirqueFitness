@@ -16,7 +16,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Hello, Ricky</h1>
+						<h1>Hello, <%= userName %></h1>
 						<p id="quote"></p>
 					</header>
 
@@ -35,21 +35,27 @@
 										<ul class="exerciseControls" data-id="<%=el._id%>">
 											<li><span class='exerciseName'><%= el.name %> ||</li>
 											<li>
-												<form action="">
-													<span class="sets">Sets: <%= el.sets %></span> <i class="fa-solid fa-plus"></i>
+												<form action="/fitnessApp/addSet<%= el._id %>?_method=PUT" method="post">
+													<span class="sets">Sets: <%= el.sets %></span> <button type="submit" class="fa-solid fa-plus"></button>
 												</form>
-												<form action="">
-													<i class="fa-solid fa-minus"></i></li><span>||</span>
+												<form action="/fitnessApp/subSet<%= el._id %>?_method=PUT" method="post">
+													<button type='submit' class="fa-solid fa-minus"></button></li><span>||</span>
 												</form>
-												<form action="/fitnessApp/addRep<%= el._Id %>?_method=PUT" method="put">
+												<form action="/fitnessApp/addRep<%= el._id %>?_method=PUT" method="post">
 													<li><span class="reps">Reps: <%= el.reps %></span><button type="submit" class="fa-solid fa-plus formButton"></button>
 												</form>
-												<form action="">
-													<i class="fa-solid fa-minus"></i> </li><span>||</span>
+												<form action="/fitnessApp/subRep<%= el._id %>?_method=PUT" method="post">
+													<button type="submit" class="fa-solid fa-minus"></button> </li><span>||</span>
 												</form>
 											
-											<li><i class="fa-solid fa-stopwatch"></i><i class="fa-solid fa-note-sticky"></i><i class="fa-solid fa-trash"></i></li>
-										</ul>
+											<li>
+												<i class="fa-solid fa-stopwatch"></i>
+												<i class="fa-solid fa-note-sticky"></i>
+												<form action="/fitnessApp/deleteExercise<%= el._id %>?_method=DELETE" method="post">
+													<button type='submit' class="fa-solid fa-trash"></button>
+												</form>
+											</li>
+								</ul>
 										<ul class="hidden extraActions">
 											<li class="timer hidden"><span>00:00</span><i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i></li>
 											<li class="notes hidden">
