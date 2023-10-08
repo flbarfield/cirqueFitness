@@ -1,90 +1,69 @@
-/* '/fitnessApp' */
+/* General */
 .hidden {
     display: none;
 }
 
-.fitnessAppImg {
-    max-width: 50%;
-    margin: 1em auto;
+html {
+    text-align: center;
+    background-color: #935d8c;
+		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+		background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 }
 
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 1%;
+}
+
+.exerciseList, .exerciseControls, form {
+    display: flex;
+}
+
+/* Header / Photo */
+header {
+    color: white;
+}
+
+.fitnessAppImg {
+    max-width: 50%;
+    margin: 2em auto 1em auto;
+    border-radius: 2%
+}
+
+
+
+/* User Data */
 .date {
     margin-bottom: 2em;
     padding-bottom: 2em;
     border-bottom: 1px solid black;
     justify-content: center;
-    display: flex;
 }
 
-.date input {
-    margin: 0 auto;
-}
-
-.exerciseTitle{
-    text-align: center;
-}
-
-.appActions{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-}
-
-.exerciseList ul {
-    display: flex;
+.exerciseList {
+    flex-direction: column;
     gap: 1em;
-    justify-content: space-between;
-}
-
-.exerciseList span {
-    margin-right: 0.7em;
-    font-size: 1.3em;
-}
-
-.exerciseList i {
-    font-size: 1em;
-}
-
-.exerciseList i:hover{
-    color: rgb(148, 95, 140);
-}
-
-.exerciseList li {
-    list-style: none;
+    padding: 1em 0 1em 0;
 }
 
 .exerciseControls {
-    border-bottom: 1px dashed black;
+    background-color: rgb(247, 247, 247);
+    justify-content: space-between;
+    align-content: center;
 }
 
-
-.fa-note-sticky, .fa-stopwatch, .fa-play {
-    margin-right: 1em;
-}
-
-.fa-trash {
-    padding-top: 0.6em;
-}
-
-.fa-plus {
-    margin-right: 1em;
-}
-
-.extraActions {
+form {
     flex-direction: column;
-}
-
-.noteSubmit {
-    margin-top: 1em;
-}
-
-.userExercise > * {
-    display: flex;
-    gap: 1em;
-}
-
-
-
-.copyright {
-    margin: 0 auto;
 }
