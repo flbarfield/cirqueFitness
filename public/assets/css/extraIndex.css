@@ -30,3 +30,7 @@ fieldset a {
     margin-bottom: 2em;
 }
 
+.alert-danger {
+    color: red;
+    font-weight: bolder;
+}

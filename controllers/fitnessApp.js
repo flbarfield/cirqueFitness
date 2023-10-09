@@ -28,9 +28,9 @@ module.exports = {
         }
     },
 
-    addRep: async(req, res) => {
+    modRep: async(req, res) => {
         try {
-            await Exercises.findOneAndUpdate({_id:req.params.id}, {$inc: {reps: +1}})
+            await Exercises.findOneAndUpdate({_id:req.params.id}, {$set: {reps: req.body.userReps}})
             console.log('Rep Added')
             res.redirect('/fitnessApp')
         } catch (err) {
@@ -38,19 +38,9 @@ module.exports = {
         }
     },
 
-    subRep: async(req, res) => {
+    modSet: async (req, res) => {
         try {
-            await Exercises.findOneAndUpdate({_id:req.params.id}, {$inc: {reps: -1}})
-            console.log('Rep Subtracted')
-            res.redirect('/fitnessApp')
-        } catch (err) {
-            console.log(err)
-        }
-    },
-
-    addSet: async (req, res) => {
-        try {
-            await Exercises.findOneAndUpdate({_id:req.params.id}, {$inc: {sets: +1}})
+            await Exercises.findOneAndUpdate({_id:req.params.id}, {$set: {sets: req.body.userSets}})
             console.log('Set Added')
             res.redirect('/fitnessApp')
         } catch (err) {
@@ -58,15 +48,6 @@ module.exports = {
         }
     },
 
-    subSet: async (req, res) => {
-        try {
-            await Exercises.findOneAndUpdate({_id:req.params.id}, {$inc: {sets: -1}})
-            console.log('Set Subtracted')
-            res.redirect('/fitnessApp')
-        } catch (err) {
-            console.log(err)
-        }
-    },
 
     deleteExercise: async (req,res) => {
         try {

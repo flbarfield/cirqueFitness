@@ -4,7 +4,7 @@
 		<title>Cirque Fitness App</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/nomalize.css">
+		<!-- <link rel="stylesheet" href="assets/css/nomalize.css"> -->
 		<link rel="stylesheet" href="assets/css/fitnessApp.css">
 		<link rel="icon" href="images/logo.png">
 	</head>
@@ -28,52 +28,49 @@
 								<section class="date">
 									<input type="date">
 								</section>
-								<ul class='exerciseList'>
+								<section class='exerciseList'>
 									<% exercises.forEach( el => { %>
-									<li>
-										<ul class="exerciseControls" data-id="<%=el._id%>">
-											<li><span class='exerciseName'><%= el.name %> ||</li>
-											<li>
-												<form action="/fitnessApp/addSet<%= el._id %>?_method=PUT" method="post">
+										<section class="exerciseControls" data-id="<%=el._id%>">
+											<section class="exerciseTitle">
+												<span class='exerciseName'><%= el.name %>
+											</section>
+											<section class="setsAndReps">
+												<form action="/fitnessApp/modSet<%= el._id %>?_method=PUT" method="post">
 													<span class="sets">Sets: <%= el.sets %></span> 
-													<input type="text" placeholder="# of Sets">
-													<button type="submit" class="fa-solid fa-plus"></button>
+													<input type="text" placeholder="# of Sets" name="userSets">
+												<button type="submit">Submit</button>
 												</form>
-												<form action="/fitnessApp/subSet<%= el._id %>?_method=PUT" method="post">
-													<button type='submit' class="fa-solid fa-minus"></button></li><span>||</span>
-												</form>
-												<form action="/fitnessApp/addRep<%= el._id %>?_method=PUT" method="post">
+												<form action="/fitnessApp/modRep<%= el._id %>?_method=PUT" method="post">
 													<span class="reps">Reps: <%= el.reps %></span>
-													<input type="text" placeholder="# of Reps">
-													<button type="submit" class="fa-solid fa-plus formButton"></button>
+													<input type="text" placeholder="# of Reps" name="userReps">
+													<button type="submit">Submit</button>
 												</form>
-												<form action="/fitnessApp/subRep<%= el._id %>?_method=PUT" method="post">
-													<button type="submit" class="fa-solid fa-minus"></button><span>||</span>
-												</form>
-											
-											<li>
-												<i class="fa-solid fa-stopwatch"></i>
-												<i class="fa-solid fa-note-sticky"></i>
+											</section>
+											<section class="exerciseButtons">
 												<form action="/fitnessApp/deleteExercise<%= el._id %>?_method=DELETE" method="post">
 													<button type='submit' class="fa-solid fa-trash"></button>
+													<button class="fa-solid fa-stopwatch"></button>
+													<button class="fa-solid fa-note-sticky"></button>
 												</form>
-											</li>
-								</ul>
-										<ul class="hidden extraActions">
-											<li class="timer hidden"><span>00:00</span><i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i></li>
-											<li class="notes hidden">
+											</section>
+										</section>
+										<section class="extraActionPanel">
+											<section class="timer hidden">
+												<span>00:00</span>
+												<i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i>
+											</section>
+											<section class="notes hidden">
 												<textarea name="notes" id=""></textarea>
-												<a class='button noteSubmit' href="">Submit</a>
-											</li>
-										</ul>
-										<% }) %>   
-									</li> 
-								</ul>
+												<button class='noteSubmit' href="#">Submit</button>
+											</section>
+										</section>
+									<% }) %>    
+								</section>
 								<ul class="appActions">
-									<li><a href="#" class="button">Exercise Bank</a></li>
-									<li><a href="#" class="button">Custom Exercise</a></li>
-									<li><a href="#" class="button">Community Exercises</a></li>
-									<li><a href="/" class="logOut button">Log Out</a></li>
+									<li><a href="#">Exercise Bank</a></li>
+									<li><a href="#">Custom Exercise</a></li>
+									<li><a href="#">Community Exercises</a></li>
+									<li><a href="/">Log Out</a></li>
 								</ul>
 								<section class="moreHiddenInfo">
 									<!-- Hidden Instructions -->
@@ -81,7 +78,7 @@
 										<form action="/fitnessApp/createExercise/<% exercises.userId %>" method="post">
 											<input type="text" name="name" placeholder="Exercise Name">
 											<input type="text" name="description" placeholder="Description">
-											<input class="button" type="submit"></input>
+											<button type="submit">Submit</button>
 										</form>
 									</section>
 									<p class="instructions"></p>

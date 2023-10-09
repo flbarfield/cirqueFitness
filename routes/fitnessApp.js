@@ -7,13 +7,9 @@ router.get('/', fitnessAppController.getFitApp)
 
 router.post('/createExercise', fitnessAppController.createExercise)
 
-router.put('/addRep:id', fitnessAppController.addRep)
+router.put('/modRep:id', fitnessAppController.modRep)
 
-router.put('/subRep:id', fitnessAppController.subRep)
-
-router.put('/addSet:id', fitnessAppController.addSet)
-
-router.put('/subSet:id', fitnessAppController.subSet)
+router.put('/modSet:id', fitnessAppController.modSet)
 
 router.delete('/deleteExercise:id', fitnessAppController.deleteExercise)
 
