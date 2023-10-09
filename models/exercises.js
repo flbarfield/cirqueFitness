@@ -13,9 +13,9 @@ const ExerciseSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    decription: {
+    description: {
         type: String,
-        require: false,
+        require: true,
     },
     userId: {
         type: String,
@@ -27,7 +27,7 @@ const ExerciseSchema = new mongoose.Schema({
     },
     date: {
         type: Date,
-        require: true,
+        default: Date.now,
     }
 
 })

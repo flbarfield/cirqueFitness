@@ -53,6 +53,52 @@ footer a {
 
 
 /***** User Data *****/
+/* general */
+.exerciseList {
+    gap: 1em;
+}
+
+/* exercise name and tooltip */
+.exerciseName {
+    border-bottom: 1px dotted black;
+    cursor: pointer;
+}
+
+.toolTipText {
+    /* visibility: hidden; */
+    /* width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s; */
+    color: purple;
+}
+
+/* .toolTipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+} */
+
+/* .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+} */
+
+/* date */
 .date {
     margin-bottom: 2em;
     padding-bottom: 2em;
@@ -61,8 +107,9 @@ footer a {
 }
 
 .exerciseList {
+    border-top: 1px solid grey;
     flex-direction: column;
-    padding: 1em 0 1em 0;
+    padding: 0 0 1em 0;
 }
 
 .exerciseControls, .extraActions, .extraActionPanel {
@@ -99,6 +146,8 @@ footer a {
     justify-content: space-between;
     padding: 1em;
     align-items: center;
+    margin-top: -1em;
+    border-bottom: 1px solid grey;
 }
 
 .notes {
@@ -123,8 +172,18 @@ footer a {
 }
 
 /* Ending App Actions */
+/* .userExercise {
+    border-top: 1px solid black;
+} */
+
+.userExercise legend {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+
 .appActions {
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1em;
 }
 
@@ -144,6 +203,9 @@ footer a {
     color: black;
     background-color: white;
 }
+
+
+
 
 .appActions li a:active, .appActions li a:hover {
     -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;

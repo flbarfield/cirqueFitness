@@ -26,13 +26,14 @@
 							<section id="content" class="main fitnessBody">
 								<span class="image main"><img class="fitnessAppImg" src="images/trainingPlaceholderLarge.jpg" alt="" /></span>
 								<section class="date">
-									<input id='date' type="date" >
+									<input id='date' type="date" value='<%=Date.now%>'>
 								</section>
 								<section class='exerciseList'>
 									<% exercises.forEach( el => { %>
 										<section class="exerciseControls" data-id="<%=el._id%>">
 											<section class="exerciseTitle">
-												<span class='exerciseName'><%= el.name %>
+												<span class="toolTipText"><%= el.description %></span>
+												<span class='exerciseName'><%= el.name %></span>
 											</section>
 											<section class="setsAndReps">
 												<form action="/fitnessApp/modSet<%= el._id %>?_method=PUT" method="post">
@@ -60,27 +61,29 @@
 											<section class=notes>
 												<form action="/fitnessApp/addNote<%= el._id %>?_method=PUT" method="post">
 													<textarea name="notes" placeholder="Notes..."><%= el.notes %></textarea>
-													<button class='noteSubmit' href="">Submit</button>
+													<button type='submit' class='noteSubmit' href="">Submit</button>
 												</form>
 											</section>
 										</section>
 									<% }) %>    
 								</section>
+								<section class="userExercise">
+									<form action="/fitnessApp/createExercise/<% exercises.userId %>" method="post">
+										<legend>Add your own Exercise:</legend>
+										<input type="text" name="name" placeholder="Exercise Name">
+										<input type="text" name="description" placeholder="Description">
+										<button type="submit">Add Exercise</button>
+									</form>
+								</section>
 								<ul class="appActions">
 									<li><a href="#">Exercise Bank</a></li>
-									<li><a href="#">Custom Exercise</a></li>
-									<li><a href="#">Community Exercises</a></li>
+									<!-- <li><a href="#">Custom Exercise</a></li> -->
+									<!-- <li><a href="#">Community Exercises</a></li> -->
 									<li><a href="/">Log Out</a></li>
 								</ul>
 								<section class="moreHiddenInfo">
 									<!-- Hidden Instructions -->
-									<section class="userExercise">
-										<form action="/fitnessApp/createExercise/<% exercises.userId %>" method="post">
-											<input type="text" name="name" placeholder="Exercise Name">
-											<input type="text" name="description" placeholder="Description">
-											<button type="submit">Submit</button>
-										</form>
-									</section>
+									
 									<p class="instructions"></p>
 									<p class="">.</p>
 								</section>
