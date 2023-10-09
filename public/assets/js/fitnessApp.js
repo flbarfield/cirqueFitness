@@ -1,18 +1,4 @@
 
-
-// Date setting
-// function setDate () {
-//     const [date] = formatDate(new Date()).split(' ')
-//     const dateInputValue = document.getElementById('date')
-
-//     dateInputValue.value = date
-// }
-
-
-
-
-// dateInputValue = date
-
 // Header quote generation //
 
 async function quoteApiRequest() {

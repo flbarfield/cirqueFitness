@@ -11,6 +11,7 @@ const connectDB = require('./config/database')
 const homeRoutes = require('./routes/home')
 const fitnessRoute = require('./routes/fitnessApp')
 
+
 //Use .env file in config folder
 require('dotenv').config({path: './config/.env'})
 

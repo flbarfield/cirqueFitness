@@ -55,48 +55,15 @@ footer a {
 /***** User Data *****/
 /* general */
 .exerciseList {
-    gap: 1em;
+    gap: 2em;
 }
 
-/* exercise name and tooltip */
+/* exercise name*/
 .exerciseName {
     border-bottom: 1px dotted black;
     cursor: pointer;
+    overflow: scroll;
 }
-
-.toolTipText {
-    /* visibility: hidden; */
-    /* width: 120px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s; */
-    color: purple;
-}
-
-/* .toolTipText::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-} */
-
-/* .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-} */
 
 /* date */
 .date {
@@ -106,12 +73,17 @@ footer a {
     justify-content: center;
 }
 
+/* Exercise Listings */
 .exerciseList {
     border-top: 1px solid grey;
     flex-direction: column;
     padding: 0 0 1em 0;
 }
 
+.exerciseControls {
+    border-bottom: 1px solid grey;
+    padding: 1em;
+}
 .exerciseControls, .extraActions, .extraActionPanel {
     background-color: rgb(247, 247, 247);
 }
@@ -146,7 +118,7 @@ footer a {
     justify-content: space-between;
     padding: 1em;
     align-items: center;
-    margin-top: -1em;
+    margin-top: -2em;
     border-bottom: 1px solid grey;
 }
 
