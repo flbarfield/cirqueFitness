@@ -27,8 +27,12 @@ main {
     border-radius: 1%;
 }
 
-.exerciseList, .exerciseControls, .setsAndReps, .extraActions, .appActions, .setsAndReps, .setsAndReps form {
+.exerciseList, .exerciseControls, .setsAndReps, .extraActions, .appActions, .setsAndReps, .setsAndReps form, .extraActionPanel {
     display: flex;
+}
+
+button, i, #date {
+    cursor: pointer;
 }
 
 /* Header / Photo / Footer*/
@@ -59,20 +63,15 @@ footer a {
 .exerciseList {
     flex-direction: column;
     padding: 1em 0 1em 0;
-    gap: 1em;
 }
 
-.exerciseControls, .extraActions {
+.exerciseControls, .extraActions, .extraActionPanel {
     background-color: rgb(247, 247, 247);
 }
 
 .exerciseControls > section {
     flex-grow: 1;
     align-content: center;
-}
-
-.exerciseControls {
-    width: 100%;
 }
 
 .exerciseTitle, .exerciseButtons {
@@ -93,8 +92,34 @@ footer a {
     flex-direction: column;
 }
 
-.exerciseButtons {
-    cursor: pointer;
+
+/* Timer / Notes */
+
+.extraActionPanel {
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+}
+
+.notes {
+    flex: 3;
+}
+
+.notes textarea {
+    width: 100%;
+}
+
+.timer {
+    flex: 1;
+}
+
+.fa-play {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+.fa-play:hover, .fa-pause:hover {
+    color: rgb(200, 113, 136);
 }
 
 /* Ending App Actions */
@@ -121,5 +146,9 @@ footer a {
 }
 
 .appActions li a:active, .appActions li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: rgb(200, 113, 136);
 }

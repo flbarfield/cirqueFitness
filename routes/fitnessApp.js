@@ -3,7 +3,7 @@ const router = express.Router()
 const fitnessAppController = require('../controllers/fitnessApp')
 const {ensureAuth} = require('../middleware/auth')
 
-router.get('/', fitnessAppController.getFitApp)
+router.get('/', ensureAuth, fitnessAppController.getFitApp)
 
 router.post('/createExercise', fitnessAppController.createExercise)
 

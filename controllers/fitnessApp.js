@@ -59,5 +59,15 @@ module.exports = {
         } catch (err) {
             console.log(err)
         }
+    },
+
+    addNote: async (req, res) => {
+        try {
+            await Exercises.findOneAndUpdate({_id:req.params.id}, {$set: {notes: req.body.notes}})
+            console.log('Note Added')
+            res.redirect('/fitnessApp')
+        }  catch (err) {
+            console.log(err)
+        }
     }
 }

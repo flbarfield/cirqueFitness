@@ -15,12 +15,21 @@ const ExerciseSchema = new mongoose.Schema({
     },
     decription: {
         type: String,
-        require: true,
+        require: false,
     },
     userId: {
         type: String,
         require: true,
+    },
+    notes: {
+        type: String,
+        require: false,
+    },
+    date: {
+        type: Date,
+        require: true,
     }
+
 })
 
 module.exports = mongoose.model('Exercise', ExerciseSchema)

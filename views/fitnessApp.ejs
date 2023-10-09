@@ -49,19 +49,19 @@
 											<section class="exerciseButtons">
 												<form action="/fitnessApp/deleteExercise<%= el._id %>?_method=DELETE" method="post">
 													<button type='submit' class="fa-solid fa-trash"></button>
-													<button class="fa-solid fa-stopwatch"></button>
-													<button class="fa-solid fa-note-sticky"></button>
 												</form>
 											</section>
 										</section>
 										<section class="extraActionPanel">
-											<section class="timer hidden">
+											<section class="timer">
 												<span>00:00</span>
 												<i class="fa-solid fa-play"></i><i class="fa-solid fa-pause"></i>
 											</section>
-											<section class="notes hidden">
-												<textarea name="notes" id=""></textarea>
-												<button class='noteSubmit' href="#">Submit</button>
+											<section class=notes>
+												<form action="/fitnessApp/addNote<%= el._id %>?_method=PUT" method="post">
+													<textarea name="notes" placeholder="Notes..."><%= el.notes %></textarea>
+													<button class='noteSubmit' href="">Submit</button>
+												</form>
 											</section>
 										</section>
 									<% }) %>    

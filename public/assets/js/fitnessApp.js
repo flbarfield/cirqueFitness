@@ -1,15 +1,4 @@
-// Unhiding Sections
 
-// document.querySelectorAll('.fa-note-sticky').addEventListener('click', showNotes)
-// document.querySelectorAll('.fa-stopwatch').addEventListener('click', showTimer)
-
-function showNotes () {
-    //TODO
-}
-
-function showTimer() {
-    // TODO
-}
 
 // Date setting
 // function setDate () {
@@ -31,7 +20,7 @@ async function quoteApiRequest() {
         let res = await fetch('https://api.kanye.rest')
         let data = await res.json()
 
-        // runs API fetch again if risky quotes are given.
+        // runs API fetch again if the more risqué quotes are given.
         if (data.quote === 'I feel like me and Taylor might still have sex' || data.quote === 'Shut the fuck up I will fucking laser you with alien fucking eyes and explode your fucking head' ) {
             res = await fetch('https://api.kanye.rest')
             data = await res.json()
