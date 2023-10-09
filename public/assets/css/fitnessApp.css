@@ -93,6 +93,10 @@ footer a {
     flex-direction: column;
 }
 
+.exerciseButtons {
+    cursor: pointer;
+}
+
 /* Ending App Actions */
 .appActions {
     justify-content: space-between;

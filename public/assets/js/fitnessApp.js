@@ -1,16 +1,31 @@
+// Unhiding Sections
+
 // document.querySelectorAll('.fa-note-sticky').addEventListener('click', showNotes)
 // document.querySelectorAll('.fa-stopwatch').addEventListener('click', showTimer)
 
-// function showNotes () {
-//     document.
+function showNotes () {
+    //TODO
+}
+
+function showTimer() {
+    // TODO
+}
+
+// Date setting
+// function setDate () {
+//     const [date] = formatDate(new Date()).split(' ')
+//     const dateInputValue = document.getElementById('date')
+
+//     dateInputValue.value = date
 // }
 
-// function showTimer() {
-
-// }
 
 
-// header quote generation
+
+// dateInputValue = date
+
+// Header quote generation //
+
 async function quoteApiRequest() {
     try {
         let res = await fetch('https://api.kanye.rest')
@@ -30,3 +45,4 @@ async function quoteApiRequest() {
 }
 
 quoteApiRequest()
+// setDate()

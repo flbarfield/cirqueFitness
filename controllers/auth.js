@@ -81,9 +81,9 @@ const User = require('../models/User')
         gmail_remove_dots: false
       });
   
-      // const existingUser = await User.findOne({
-      //   $or: [{ email: req.body.email }, { userName: req.body.userName }]
-      // });
+      const existingUser = await User.findOne({
+        $or: [{ email: req.body.email }, { userName: req.body.userName }]
+      });
   
       if (existingUser) {
         req.flash("errors", {
