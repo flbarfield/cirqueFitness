@@ -131,7 +131,8 @@ footer a {
 }
 
 .timer {
-    flex: 1;
+    margin: 1em 0 2em 0;
+    font-size: 1.5em;
 }
 
 .fa-play {
@@ -139,7 +140,11 @@ footer a {
     margin-left: 0.5em;
 }
 
-.fa-play:hover, .fa-pause:hover {
+.fa-pause {
+    margin-right: 0.5em;
+}
+
+.fa-play:hover, .fa-pause:hover, .fa-repeat:hover {
     color: rgb(200, 113, 136);
 }
 
