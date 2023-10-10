@@ -11,7 +11,6 @@ const connectDB = require('./config/database')
 const homeRoutes = require('./routes/home')
 const fitnessRoute = require('./routes/fitnessApp')
 
-
 //Use .env file in config folder
 require('dotenv').config({path: './config/.env'})
 
@@ -60,6 +59,6 @@ app.use('/', homeRoutes)
 app.use('/fitnessApp', fitnessRoute)
 
 //Server Running
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 2121, () => {
     console.log('Server is running! WHOOP! Port2121')
 })
