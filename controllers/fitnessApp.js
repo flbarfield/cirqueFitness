@@ -18,6 +18,7 @@ module.exports = {
                 name: req.body.name,
                 sets: 0,
                 reps: 0,
+                weight: 0,
                 description: req.body.description,
                 userId: req.user.id,
             })
@@ -42,6 +43,16 @@ module.exports = {
         try {
             await Exercises.findOneAndUpdate({_id:req.params.id}, {$set: {sets: req.body.userSets}})
             console.log('Set Added')
+            res.redirect('/fitnessApp')
+        } catch (err) {
+            console.log(err)
+        }
+    },
+
+    modWeight: async (req, res) => {
+        try {
+            await Exercises.findOneAndUpdate({_id:req.params.id}, {$set: {weight: req.body.userWeight}})
+            console.log('Weight Added')
             res.redirect('/fitnessApp')
         } catch (err) {
             console.log(err)

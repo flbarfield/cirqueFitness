@@ -28,6 +28,10 @@ const ExerciseSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now,
+    },
+    weight: {
+        type: Number,
+        required: true,
     }
 
 })

@@ -11,6 +11,8 @@ router.put('/modRep:id', fitnessAppController.modRep)
 
 router.put('/modSet:id', fitnessAppController.modSet)
 
+router.put('/modWeight:id', fitnessAppController.modWeight)
+
 router.put('/addNote:id', fitnessAppController.addNote)
 
 router.delete('/deleteExercise:id', fitnessAppController.deleteExercise)

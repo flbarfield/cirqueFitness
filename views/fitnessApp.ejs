@@ -44,6 +44,11 @@
 													<input type="text" placeholder="# of Reps" name="userReps">
 													<button type="submit">Submit</button>
 												</form>
+												<form action="/fitnessApp/modWeight<%= el._id %>?_method=PUT" method="post">
+													<span class="weight">Weight: <%= el.weight %></span>
+													<input type="text" placeholder="Amount of weight" name="userWeight">
+													<button type="submit">Submit</button>
+												</form>
 											</section>
 											<section class="exerciseButtons">
 												<form action="/fitnessApp/deleteExercise<%= el._id %>?_method=DELETE" method="post">
