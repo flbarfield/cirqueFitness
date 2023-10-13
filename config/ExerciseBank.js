@@ -11,7 +11,6 @@ let exercises = {
         'video':'',
         'muscleGroups': 'Hip extensors, Abdominals', 
         'apperatus': 'Any aerial apperatus',
-        'stopwatch': false,
         'description':'' ,
     },
     'Ring Push Ups' : {
@@ -20,7 +19,6 @@ let exercises = {
         'video':'',
         'muscleGroups': 'Chest, Abdominals', 
         'apperatus': 'Rings, Aerial Straps, Silks',
-        'stopwatch': false,
         'description': 'Pushups are the most utilized exercise in fitness. There are a few reasons for this, Pushups are safe, require no equipment and are an exercise that works many muscle groups at once. However, an underutilized variation is the ring pushup. Gymnastic Ring pushups are great because it incorporates a stabilization element and a pec fly element.' ,
     },
     'Meat Hook' : {
@@ -29,7 +27,6 @@ let exercises = {
         'video':'',
         'muscleGroups': 'Shoulders, Lats, Abdominals', 
         'apperatus': 'Aerial Straps, Lyra, Trapeze',
-        'stopwatch': false,
         'description': 'Pushups are the most utilized exercise in fitness. There are a few reasons for this, Pushups are safe, require no equipment and are an exercise that works many muscle groups at once. However, an underutilized variation is the ring pushup. Gymnastic Ring pushups are great because it incorporates a stabilization element and a pec fly element.' ,
     }
 }

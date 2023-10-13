@@ -46,7 +46,7 @@
 												</form>
 												<form action="/fitnessApp/modWeight<%= el._id %>?_method=PUT" method="post">
 													<span class="weight">Weight: <%= el.weight %></span>
-													<input type="text" placeholder="Amount of weight" name="userWeight">
+													<input type="text" placeholder="Amount of weight as a #" name="userWeight">
 													<button type="submit">Submit</button>
 												</form>
 											</section>
@@ -81,16 +81,25 @@
 									</form>
 								</section>
 								<ul class="appActions">
-									<!-- <li><a href="#">Exercise Bank</a></li> -->
+									<li><a onclick=showExerciseBank() href="#exerciseBank">Exercise Bank</a></li>
 									<!-- <li><a href="#">Custom Exercise</a></li> -->
 									<!-- <li><a href="#">Community Exercises</a></li> -->
 									<li><a href="/">Log Out</a></li>
 								</ul>
-								<section class="moreHiddenInfo">
-									<!-- Hidden Instructions -->
-									
-									<p class="instructions"></p>
-									<p class="">.</p>
+								<section id="exerciseBank" class="hidden">
+									<section class="bankList">
+										<ul>
+											<li>lorem</li>
+											<li>lorem</li>
+											<li>lorem</li>
+											<li>lorem</li>
+										</ul>
+									</section>
+									<section class="bankInfo">
+										<img class="bankImg" src="images/meatHook.jpg" alt="">
+										<p class="bankDesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam labore deserunt consectetur assumenda tempora. Fuga odio at quaerat doloremque voluptatem. Molestias sapiente est odio maiores inventore, suscipit alias temporibus! Sequi.</p>
+										<span><a class="youTubeLink" href="#">YouTube Link</a></span>
+									</section>	
 								</section>
 							</section>
 

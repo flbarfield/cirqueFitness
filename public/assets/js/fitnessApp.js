@@ -62,4 +62,10 @@ async function quoteApiRequest() {
 
 quoteApiRequest()
 
-// date setting...
+// date setting.....
+
+
+//show exerciseBank
+function showExerciseBank () {
+    document.getElementById('exerciseBank').classList.toggle('hidden')
+}

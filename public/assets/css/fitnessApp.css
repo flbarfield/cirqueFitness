@@ -1,6 +1,6 @@
 /* General */
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 html {
@@ -27,7 +27,7 @@ main {
     border-radius: 1%;
 }
 
-.exerciseList, .exerciseControls, .setsAndReps, .extraActions, .appActions, .setsAndReps, .setsAndReps form, .extraActionPanel {
+.exerciseList, .exerciseControls, .setsAndReps, .extraActions, .appActions, .setsAndReps, .setsAndReps form, .extraActionPanel, #exerciseBank {
     display: flex;
 }
 
@@ -181,9 +181,6 @@ footer a {
     background-color: white;
 }
 
-
-
-
 .appActions li a:active, .appActions li a:hover {
     -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -191,3 +188,17 @@ footer a {
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     background-color: rgb(200, 113, 136);
 }
+
+/* Exercise Bank */
+#exerciseBank > * {
+    width: 100%;
+    padding: 4em;
+    max-height: 50em;
+    overflow: scroll;
+    background-color: rgb(247, 247, 247);
+}
+
+.bankImg {
+    max-width: 70%;
+}
+
