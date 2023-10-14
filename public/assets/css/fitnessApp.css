@@ -27,7 +27,7 @@ main {
     border-radius: 1%;
 }
 
-.exerciseList, .exerciseControls, .setsAndReps, .extraActions, .appActions, .setsAndReps, .setsAndReps form, .extraActionPanel, #exerciseBank {
+.exerciseList, .exerciseControls, .setsAndReps, .extraActions, .appActions, .setsAndReps, .setsAndReps form, .extraActionPanel, #exerciseBank, #bankList {
     display: flex;
 }
 
@@ -198,6 +198,9 @@ footer a {
     background-color: rgb(247, 247, 247);
 }
 
+#bankList {
+    flex-direction: column
+}
 .bankImg {
     max-width: 70%;
 }
