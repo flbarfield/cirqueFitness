@@ -100,12 +100,13 @@ function populateBankInfo (prop) {
 
     const {photo, instructions, video, muscleGroups} = exercises.Hanging_Leg_Raises
 
+    document.querySelector('.bankInfoExerciseTitle').innerText = prop.replaceAll('_', ' ')
     document.querySelector('.bankImg').src = photo
     document.querySelector('.muscleGroups').innerText = muscleGroups
     document.querySelector('.bankInstructions').innerText = instructions
     document.querySelector('.youTubeLink').href = video 
 
-    console.log(photo)
+    console.log(prop)
 }
 
 // exercise bank content
