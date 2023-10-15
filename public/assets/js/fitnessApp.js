@@ -60,12 +60,24 @@ async function quoteApiRequest() {
 
 }
 
-// date setting
+// date setting...for now. This needs to be done via backend so I can populate based off it.
 function defaultDate () {
-    // let date = new Date().toISOString().substring(0, 10), field = document.getElementById('date')
-    // field.value = date
-}
+    let myDate, day, month, year, date
+    
+    myDate = new Date
+    day = myDate.getDate()
+    if (day < 10){
+        day = '0' + day
+    }
+    month = myDate.getMonth() + 1
+    if (month < 10){
+        month = '0' + month
+    }
+    year = myDate.getFullYear()
+    date = `${year}-${month}-${day}`
 
+    document.getElementById('date').value = date
+}
 
 //show exerciseBank
 function showExerciseBank () {
@@ -139,6 +151,7 @@ const exercises = {
     }
 }
 
+defaultDate()
 populateExerciseBank()
 quoteApiRequest()
 
