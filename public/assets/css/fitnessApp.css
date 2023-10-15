@@ -266,6 +266,37 @@ footer a {
     .notes textarea {
         width: 90%;
     }
+
+    #exerciseBank {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+        width: 100%;
+    }
+
+    #exerciseBank > * {
+        width: 100%;
+        padding: 0;
+        /* margin: 0 auto; */
+    }
+
+    #exerciseBank .bankLeft{
+        padding: 0;
+    }
+
+    .bankLeft ul {
+        margin: 0 auto;
+        padding: 1em 0 0 0;
+        height: 5em;
+        overflow: scroll;
+    }
+
+    #exerciseBank .bankInfo {
+        padding-bottom: 2em;
+    }
+
+    
 }
 
 @media screen and (max-width: 600px) {
