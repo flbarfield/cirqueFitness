@@ -105,8 +105,7 @@ function populateBankInfo (prop) {
     document.querySelector('.muscleGroups').innerText = muscleGroups
     document.querySelector('.bankInstructions').innerText = instructions
     document.querySelector('.youTubeLink').href = video 
-
-    console.log(prop)
+    document.querySelector('.youTubeLink').innerText = 'YouTube Link' 
 }
 
 // exercise bank content
