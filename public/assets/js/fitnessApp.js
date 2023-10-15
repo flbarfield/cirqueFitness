@@ -96,9 +96,9 @@ function populateExerciseBank () {
 
 // adds descriptions, images and links to bankInfo
 function populateBankInfo (prop) {
-    // Need top figure out how to pass in this prop in the place of 'Hanging_Leg_Raises in this example...Once I have that, everything else should be all set.
 
-    const {photo, instructions, video, muscleGroups} = exercises.Hanging_Leg_Raises
+    // converts variable property from classList into an expression
+    const {photo, instructions, video, muscleGroups} = eval(`exercises.` + `${prop}`)
 
     document.querySelector('.bankInfoExerciseTitle').innerText = prop.replaceAll('_', ' ')
     document.querySelector('.bankImg').src = photo
