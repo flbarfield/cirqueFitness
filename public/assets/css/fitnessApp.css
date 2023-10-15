@@ -158,13 +158,13 @@ footer a {
     margin-bottom: 0.5em;
 }
 
-
+/* App actions and Bank Buttons */
 .appActions {
     justify-content: space-around;
     padding: 1em;
 }
 
-.appActions li a {
+.appActions li a, .bankAddButton {
     border-radius: 8px;
     border: 0;
     display: inline-block;
@@ -181,12 +181,17 @@ footer a {
     background-color: white;
 }
 
-.appActions li a:active, .appActions li a:hover {
+.appActions li a:active, .appActions li a:hover, .bankAddButton:hover {
     -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     background-color: rgb(200, 113, 136);
+}
+
+.bankAddButton {
+    max-width: 30%;
+    margin: 2em auto 0 auto;
 }
 
 /* Exercise Bank */

@@ -102,10 +102,17 @@ function populateBankInfo (prop) {
 
     document.querySelector('.bankInfoExerciseTitle').innerText = prop.replaceAll('_', ' ')
     document.querySelector('.bankImg').src = photo
-    document.querySelector('.muscleGroups').innerText = muscleGroups
+    document.querySelector('.muscleGroups').innerText = 'Involved Muscle Groups: \n' + muscleGroups
     document.querySelector('.bankInstructions').innerText = instructions
     document.querySelector('.youTubeLink').href = video 
-    document.querySelector('.youTubeLink').innerText = 'YouTube Link' 
+    document.querySelector('.youTubeLink').innerText = 'YouTube Link'
+    document.querySelector('.bankAddButton').classList.remove('hidden') 
+    document.getElementById('bankName').value = prop.replaceAll('_', ' ')
+    document.getElementById('bankDescription').value = instructions
+}
+
+function addExerciseFromBank() {
+    //TO DO
 }
 
 // exercise bank content

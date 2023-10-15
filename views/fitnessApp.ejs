@@ -93,11 +93,16 @@
 									</section>
 									<section class="bankInfo">
 										<!-- All inputed via JS -->
-										<h1 class="bankInfoExerciseTitle"></h1>
-										<img class="bankImg" src="" alt="">
-										<span class="muscleGroups"></span>
-										<p class="bankInstructions"></p>
-										<span><a class="youTubeLink" target='_blank' href=""></a></span>
+											<h1 class="bankInfoExerciseTitle"></h1>
+											<img class="bankImg" src="" alt="">
+											<span class="muscleGroups"></span>
+											<p class="bankInstructions"></p>
+											<span><a class="youTubeLink" target='_blank' href=""></a></span>
+										<form action="/fitnessApp/createExercise<% exercises.userId%>" method="post">
+											<input type="hidden" name="name" id="bankName">
+											<input type="hidden" name="description" id="bankDescription">
+											<button type="submit" class='bankAddButton hidden' href="#">Add Exercise</button>
+										</form>
 									</section>	
 								</section>
 							</section>
