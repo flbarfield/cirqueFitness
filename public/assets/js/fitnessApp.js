@@ -60,9 +60,10 @@ async function quoteApiRequest() {
 
 }
 
-// date setting.....
+// date setting
 function defaultDate () {
-    //TODO
+    // let date = new Date().toISOString().substring(0, 10), field = document.getElementById('date')
+    // field.value = date
 }
 
 
@@ -107,13 +108,11 @@ function populateBankInfo (prop) {
     document.querySelector('.youTubeLink').href = video 
     document.querySelector('.youTubeLink').innerText = 'YouTube Link'
     document.querySelector('.bankAddButton').classList.remove('hidden') 
+    // allows hidden form submission to work
     document.getElementById('bankName').value = prop.replaceAll('_', ' ')
     document.getElementById('bankDescription').value = instructions
 }
 
-function addExerciseFromBank() {
-    //TO DO
-}
 
 // exercise bank content
 const exercises = {

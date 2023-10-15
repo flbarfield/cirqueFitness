@@ -82,7 +82,7 @@ footer a {
 
 .exerciseControls {
     border-bottom: 1px solid grey;
-    padding: 1em;
+    padding: 1em 0;
 }
 .exerciseControls, .extraActions, .extraActionPanel {
     background-color: rgb(247, 247, 247);
@@ -95,6 +95,7 @@ footer a {
 
 .exerciseTitle, .exerciseButtons {
     align-self: center;
+    justify-self: center;
     height: 100%;
 }
 .setsAndReps {
@@ -112,6 +113,7 @@ footer a {
 }
 
 
+
 /* Timer / Notes */
 
 .extraActionPanel {
@@ -127,7 +129,9 @@ footer a {
 }
 
 .notes textarea {
-    width: 100%;
+    width: 50%;
+    margin: 1em auto 1em auto;
+    display: flex;
 }
 
 .timer {
@@ -227,3 +231,54 @@ footer a {
     margin: 0 auto 1em auto;
 }
 
+@media screen and (max-width: 860px) {
+    /* .exerciseList {
+        background-color: blue;
+    } */
+
+    .exerciseControls, .setsAndReps {
+        flex-direction: column;
+    }
+
+    .exerciseControls {
+        width: 100%;
+        margin: 0 auto;
+    }
+        .exerciseTitle {
+            margin-bottom: 1em;
+        }
+
+        .setsAndReps{
+            width: 40%;
+            margin: 0 auto;
+            border: none;
+            gap: 1em;
+        }
+
+            .sets, .reps, .weight {
+                margin-bottom: 0.5em;
+            }
+
+            .fa-trash {
+                margin-top: 0.5em;
+            }
+    
+    .notes textarea {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .userExercise form {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .appActions {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+}
