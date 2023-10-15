@@ -61,6 +61,9 @@ async function quoteApiRequest() {
 }
 
 // date setting.....
+function defaultDate () {
+    //TODO
+}
 
 
 //show exerciseBank
@@ -77,13 +80,32 @@ function populateExerciseBank () {
         bankList.appendChild(document.createElement('a'))
         bankList.lastChild.textContent = fixedE_String
         //sets classname as exercise bank name for reference in adding links.
-        bankList.lastChild.setAttribute('class', e )
+        bankList.lastChild.setAttribute('class', e + ' bankListItem' )
     }
+
+    // adds event listener to all bankList items
+    const addedExerciseBankItems = document.querySelectorAll('.bankListItem')
+
+    addedExerciseBankItems.forEach((exerciseItem) => {
+        //returns needed prop for exercise bank
+        exerciseItem.addEventListener('click', (e) => {
+            populateBankInfo(e.target.classList[0])
+        })
+    })
 }
 
 // adds descriptions, images and links to bankInfo
-function populateBankInfo () {
-// TODO
+function populateBankInfo (prop) {
+    // Need top figure out how to pass in this prop in the place of 'Hanging_Leg_Raises in this example...Once I have that, everything else should be all set.
+
+    const {photo, instructions, video, muscleGroups} = exercises.Hanging_Leg_Raises
+
+    document.querySelector('.bankImg').src = photo
+    document.querySelector('.muscleGroups').innerText = muscleGroups
+    document.querySelector('.bankInstructions').innerText = instructions
+    document.querySelector('.youTubeLink').href = video 
+
+    console.log(photo)
 }
 
 // exercise bank content

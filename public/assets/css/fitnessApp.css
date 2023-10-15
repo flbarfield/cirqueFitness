@@ -27,7 +27,7 @@ main {
     border-radius: 1%;
 }
 
-.exerciseList, .exerciseControls, .setsAndReps, .extraActions, .appActions, .setsAndReps, .setsAndReps form, .extraActionPanel, #exerciseBank, #bankList {
+.exerciseList, .exerciseControls, .setsAndReps, .extraActions, .appActions, .setsAndReps, .setsAndReps form, .extraActionPanel, #exerciseBank, #bankList, .bankInfo {
     display: flex;
 }
 
@@ -199,9 +199,26 @@ footer a {
 }
 
 #bankList {
-    flex-direction: column
+    flex-direction: column;
 }
+
+#bankList a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;;
+}
+
+#bankList a:hover {
+    color: rgb(200, 113, 136);
+    text-decoration-color: rgb(200, 113, 136);
+    cursor: pointer;
+}
+
+.bankInfo {
+    flex-direction: column;
+}
+
 .bankImg {
     max-width: 70%;
+    margin: 0 auto 1em auto;
 }
 
