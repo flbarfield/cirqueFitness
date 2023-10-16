@@ -26,7 +26,7 @@ module.exports = {
         }
     },
 
-    getUserDateEntries: async (req, res) => {
+    getUserDateEntries: async (req, res, next) => {
         try {
             const reqDate = moment(req.body.userDate)
             const startOfUserDate = reqDate.startOf('day').toString()
