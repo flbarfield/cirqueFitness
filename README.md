@@ -1,7 +1,6 @@
 
 
-# Demo Website: [Here](https://cirque-fitness-9235de5183f0.herokuapp.com/)
-
+# Demo Website: [Here](https://cirquefitness.cyclic.app/)
 
 ![Cirque Fitness App Gif](https://res.cloudinary.com/dniwvymzt/image/upload/v1697132736/Portfolio/CirqueFitness_wckdlp.gif)
 
@@ -48,5 +47,4 @@ This project is one that's actively allowed me to hone so many types of skills i
 
 | [The Budding Chef](https://github.com/flbarfield/theBuddingChef) ![Budding Chef Gif](https://res.cloudinary.com/dniwvymzt/image/upload/v1697132736/Portfolio/TheBuddingChef_kxhedk.gif)| [Aurora Luxury Rentals](https://github.com/flbarfield/auroraLuxuryRentals) ![Aurora Luxury Rentals Photo](https://res.cloudinary.com/dniwvymzt/image/upload/v1697132842/Portfolio/auroraStill_banubq.png)| [Portfolio](https://github.com/flbarfield/portfolioStuff) ![enter image description here](https://res.cloudinary.com/dniwvymzt/image/upload/v1697132736/Portfolio/portfolioScreen_miwun1.png) |
 |---|---|---|
-
 
