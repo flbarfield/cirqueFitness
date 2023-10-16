@@ -6,11 +6,14 @@ module.exports = {
         console.log(req.user)
         
         try {
+            const now = moment()
+            const endOfDay = now.endOf('day').toString()
+            const startOfDay = now.startOf('day').toString()
 
            const exerciseItems = await Exercises.find({$and: [ 
                 {userId: req.user.id}, 
-                {date: {'$gte': new Date(),
-                    '$lt': new Date()}
+                {date: {'$gte': startOfDay,
+                    '$lt': endOfDay}
 
             }]}) 
 
