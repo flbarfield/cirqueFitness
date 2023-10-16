@@ -25,7 +25,10 @@
 							<section id="content" class="main fitnessBody">
 								<span class="image main"><img class="fitnessAppImg" src="images/trainingPlaceholderLarge.jpg" alt="" /></span>
 								<section class="date">
-									<input id='date' type="date" value=""/>
+									<form action="/fitnessApp/setDate" method="post">
+										<input id='date' type="date" value="<%= currentDateInput %>"/>
+										<button type="submit">Set Date</button>
+									</form>
 								</section>
 								<section class='exerciseList'>
 									<% exercises.forEach( el => { %>

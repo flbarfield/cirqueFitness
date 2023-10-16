@@ -1,12 +1,31 @@
 const Exercises = require('../models/exercises')
+const moment = require('moment')
 
 module.exports = {
     getFitApp: async (req, res) => {
         console.log(req.user)
-        const userName = req.user
+        
         try {
-           const exerciseItems = await Exercises.find({userId: req.user.id})
-           res.render('fitnessApp.ejs', {exercises: exerciseItems, userName: req.user.userName})  
+
+           const exerciseItems = await Exercises.find({$and: [ 
+                {userId: req.user.id}, 
+                {date: {'$gte': new Date(),
+                    '$lt': new Date()}
+
+            }]}) 
+
+           let currentDateInput = moment().format('YYYY-MM-DD')
+
+           res.render('fitnessApp.ejs', {exercises: exerciseItems, userName: req.user.userName, currentDateInput})  
+           
+        } catch (err) {
+            console.log(err)
+        }
+    },
+
+    setDate: async (req, res) => {
+        try {
+            // TO DO
         } catch (err) {
             console.log(err)
         }
