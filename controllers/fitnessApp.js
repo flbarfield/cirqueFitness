@@ -26,9 +26,22 @@ module.exports = {
         }
     },
 
-    setDate: async (req, res) => {
+    getUserDateEntries: async (req, res) => {
         try {
-            // TO DO
+            const reqDate = moment(req.body.userDate)
+            const startOfUserDate = reqDate.startOf('day').toString()
+            const endOfUserDate = reqDate.endOf('day').toString()
+            
+            const exerciseItems = await Exercises.find({$and: [ 
+                {userId: req.user.id}, 
+                {date: {'$gte': startOfUserDate,
+                    '$lt': endOfUserDate}
+
+            }]})
+
+            let currentDateInput = moment(reqDate).format('YYYY-MM-DD')
+
+            res.render('fitnessApp.ejs', {exercises: exerciseItems, userName: req.user.userName, currentDateInput}) 
         } catch (err) {
             console.log(err)
         }

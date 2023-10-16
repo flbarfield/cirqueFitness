@@ -5,6 +5,8 @@ const {ensureAuth} = require('../middleware/auth')
 
 router.get('/', ensureAuth, fitnessAppController.getFitApp)
 
+router.get('/getUserDateEntries', fitnessAppController.getUserDateEntries)
+
 router.post('/createExercise', fitnessAppController.createExercise)
 
 router.put('/modRep:id', fitnessAppController.modRep)
