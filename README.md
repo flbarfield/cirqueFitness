@@ -21,11 +21,10 @@ Users can also register with their own credentials.
 <h2>Optimizations</h2>
 As this is a currently developing project, there's a quite a lot of things I would like to implement! 
 
- 1. Link up the date input with actual dates so that the user can look at past days for reference.
- 2. Expand the exercise bank with more workouts. 
- 3. Create a separate exercise bank that's purely community-driven. They'll be able to add and "like" the best exercises, so the ones with the best descriptions and videos will naturally rise to the top.
- 4. Make a way for any particular exercise to be presented to the user as a graph based on past reps, sets, and weight increases so that they can see all the progress they've been making.
- 5. Fix HTTPS bug regarding google fonts
+ 1. Expand the exercise bank with more workouts. 
+ 2. Create a separate exercise bank that's purely community-driven. They'll be able to add and "like" the best exercises, so the ones with the best descriptions and videos will naturally rise to the top.
+ 3. Make a way for any particular exercise to be presented to the user as a graph based on past reps, sets, and weight increases so that they can see all the progress they've been making.
+ 4. Fix HTTPS bug regarding google fonts
 
 ---
 <h2>Lessons Learned</h2>
