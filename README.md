@@ -25,10 +25,11 @@ As this is a currently developing project, there's a quite a lot of things I wou
  3. Make a way for any particular exercise to be presented to the user as a graph based on past reps, sets, and weight increases so that they can see all the progress they've been making.
  4. Fix HTTPS bug regarding google fonts.
  5. Have the calendar show which dates do and do not already have exercises stored within them.
+ 6. Display a message when exercises have not been added to the day yet.
 
 ---
 <h2>Lessons Learned</h2>
-This project is one that's actively allowed me to hone so many types of skills in one cohesive place as a full-stack web application. I've learned SO much from building, breaking, troubleshooting, cursing for hours, reviving the project and celebrating, only to break it again in a couple more days, and it's been such a wild ride! It's included the learning and usage of Passport, Node, Heroku, MongoDB, Express, EJS, Babel, and MVC architecture, all on top of dealing with strange problems within my JavaScript, CSS, and HTML foundations.
+This project is one that's actively allowed me to hone so many types of skills in one cohesive place as a full-stack web application! It's included the learning and usage of Passport for authentication and login, Node, Heroku, MongoDB, Express, EJS, Babel, session storage, and MVC architecture. I've learned a lot about the CRUD methodology so that I could allow the user to manipulate data within the database. I've dabbled in the intricacies of manipulating date and time to not only implement a stopwatch feature but also assist in displaying which day-related exercises were going to get sent to the page. And there were certainly a ton of more minor things, such as how I should reference my images if I'm going to be accessing the stylesheet from different paths and when to throw away a bunch of prewritten CSS rules when I've wasted so much time fighting against someone else's crazy levels of specificity in their declarations without a whole lot of purpose. I've sharpened my ability to traverse and manipulate the DOM through JavaScript... And the list goes on! The project is yet to be finished!
 
 ---
 <h2>Installation</h2>
