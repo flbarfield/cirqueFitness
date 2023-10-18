@@ -5,7 +5,7 @@
 
 ---
 <h2>Summary</h2>
-A circus artist's fitness Full Stack Web Application built with the use of **Node**, **MongoDB**, **JavaScript**, **EJS**, and employing the usage of the **MVC Model** and **CRUD** principals. While still under development, this app application currently features user authentication and session saving, the inputting and editing of a user's custom exercises, the ability to track sets  and reps, and a built-in timer for holding isometric exercises.
+A circus artist's fitness Full full-stack web application built with the use of Node, MongoDB, JavaScript, and EJS and employing the MVC model and CRUD principles. While still under development, this app application currently features user authentication and session saving, inputting and editing of a user's custom exercises, an exercise bank that can assist in populating their exercise lists, the ability to track sets and reps, and a built-in timer for holding isometric exercises. The user's exercises are also saved for specific dates, so they can go back and reference them to see what they have done in the past.
 
 ---
 <h2>Demo Log in</h2>
