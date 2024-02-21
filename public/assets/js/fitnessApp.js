@@ -93,7 +93,7 @@ function populateExerciseBank () {
 function populateBankInfo (prop) {
 
     // converts variable property from classList into an expression
-    const {photo, instructions, video, muscleGroups} = eval(`exercises.` + `${prop}`)
+    const {photo, instructions, video, muscleGroups} = eval(`exercises.${prop}`)
 
     document.querySelector('.bankInfoExerciseTitle').innerText = prop.replaceAll('_', ' ')
     document.querySelector('.bankImg').src = photo
